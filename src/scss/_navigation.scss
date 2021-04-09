@@ -1,0 +1,34 @@
+.navigation {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 23px 0 10px 0;
+
+    .nav-item {
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 0;
+        margin: 0 10px 0 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active > .nav-link {
+            border-bottom-color: $red;
+        }
+    }
+
+    .nav-link {
+        display: block;
+        background: $white;
+        border-radius: 4px;
+        border-bottom: 3px solid transparent;
+        text-align: center;
+        font-family: $font-family-sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 13px 0 10px 0;
+    }
+
+}

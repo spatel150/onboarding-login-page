@@ -1,0 +1,128 @@
+.pathway-list {
+    background-color: #f8f8f8;
+}
+
+.training-session-list {
+    font-size: 12px;
+
+    .training-session-list-header {
+        transform: translateY(-15px);
+        display: flex;
+        justify-content: center;
+
+        select {
+            border: none;
+            font-size: 12px;
+            color: #5d6170;
+            font-weight: 700;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-right: 10px;
+        }
+
+        .active-training-session-date {
+            display: flex;
+            align-items: center;
+            border-left: 1px solid #838899;
+            padding-left: 15px;
+        }
+    }
+}
+
+.pathway {
+    border-radius: 8px;
+    border: solid 1px rgb(240, 240, 240);
+    margin-bottom: 10px;
+    background-color: white;
+
+    .pathway-header {
+        padding: 10px;
+        padding-left: 15px;
+
+        .pathway-name {
+            color: #383c4a;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .pathway-progress-container {
+            display: flex;
+            justify-content: center;
+
+            .pathway-session-progress-blocks {
+                display: flex;
+                justify-content: center;
+                margin: 15px 0;
+                width: 100%;
+                max-width: 275px;
+
+                .pathway-session-progress-block {
+                    width: 16%;
+                    max-width: 35px;
+                    height: 29px;
+                    margin: 0 4px;
+                    border-radius: 6px;
+                    background: #838899;
+                    
+                    @media all and (max-width: 300px) {
+                        height: 22px;
+                    }
+
+                    &.complete {
+                        background: linear-gradient(to bottom, #ff0000, #ff0000);
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+
+            .pathway-session-progress-text {
+                .sessions-completed {
+                    font-weight: 700;
+                    margin-right: 4px;
+                }
+            }
+
+            svg {
+                margin-left: -5px;
+            }
+        }
+    }
+
+    &.collapsed {
+
+        .pathway-header {
+            display: flex;
+            justify-content: space-between;
+
+            .pathway-name {
+                color: #838899;
+                display: flex;
+                align-items: center;
+            }
+
+            .pathway-session-progress-text {
+                display: flex;
+                align-items: center;
+            }
+
+            span {
+                font-size: 14px;
+            }
+
+            
+
+            svg {
+                margin-top: 5px;
+                margin-left: 5px;
+                margin-right: -5px;
+            }
+        }
+    }
+
+    .pathway-no-sessions {
+        padding: 0 20px 20px;
+    }
+}

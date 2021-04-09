@@ -1,0 +1,43 @@
+.player-navigation {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 23px 0 10px 0;
+    width: 100vw;
+    border-bottom: solid 1px rgba(26, 28, 34, 0.1);
+    transform: translateX(-15px);
+
+    @media screen and (min-width: 576px) {
+    width: 100%;
+    transform: translateX(0px);
+    }
+
+    .nav-item {
+        flex-basis: 0;
+        padding: 0;
+        margin: 0 10px 0 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .nav-link {
+        display: block;
+        border-bottom: 3px solid transparent;
+        text-align: center;
+        font-family: $Roboto;
+        font-size: 14px;
+        padding: 0 0 3px 0;
+
+        &.active {
+            border-bottom-color: $red;
+            font-weight: 700;
+            color: $red;
+        }
+    }
+
+}
