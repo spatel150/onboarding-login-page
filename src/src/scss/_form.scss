@@ -1,0 +1,33 @@
+input {
+    background-color: $light;
+    border: 1px solid darken($color: $light, $amount: 10%);
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+button {
+    background-color: $primary;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    color: $white;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+
+    &.btn-white {
+        background-color: $white;
+        color: $text-dark;
+    }
+
+    &.btn-transparent {
+        background-color: transparent;
+        color: $text-dark;
+    }
+}

@@ -1,0 +1,24 @@
+@import-normalize;
+
+@import './variables';
+
+// Selectively import certain Bootstrap files
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/utilities';
+@import 'node_modules/bootstrap/scss/images';
+
+@import './common';
+@import './form';
+@import './login-page';
+@import './login-form';
+@import './player-navigation';
+@import './player';
+@import './training-session';
+@import './flip-card';
+@import './progress-ring';
+@import './overall-section';
+@import './pathway';
+@import './modal';
+@import './sign-in';
+@import './sign-up';

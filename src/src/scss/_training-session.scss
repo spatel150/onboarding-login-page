@@ -1,0 +1,224 @@
+.training-session {
+    margin-bottom: 12px;
+    transition: height 0.2s ease-in-out;
+
+    &.expanded {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        .training-session-header {
+            margin-bottom: 15px;
+
+            button {
+                transform: translateX(15px);
+            }
+        }
+
+        .training-session-details {
+            margin: 0 5px;
+        }
+    }
+
+    &.collapsed {
+        border-radius: 8px;
+        border: solid 1px rgb(231, 231, 231);
+
+        .training-session-header {
+            
+
+            .training-session-name {
+                color: #838899;
+            }
+
+            .training-session-date {
+                color: #838899;
+            }
+
+            progress {
+                display: none;
+            }
+        }
+    }
+
+    .training-session-header {
+        display: flex;
+        font-size: 13px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+
+        .training-session-name {
+            color: white;
+            font-weight: 700;
+            margin-right: 10px;
+            z-index: 1;
+        }
+
+        .training-session-date {
+            color: white;
+            font-weight: 700;
+            margin-left: 45%;
+            z-index: 1;
+        }
+
+        button {
+            padding: 0 5px;
+        }
+
+        progress {
+            position: absolute;
+            z-index: 0;
+            width: 67%;
+            height: 32px;
+            transform: translateX(-5px);
+            -webkit-appearance: none;
+        }
+
+        ::-webkit-progress-bar {
+            background-color: #838899
+
+            ;
+            border-radius: 6px;
+          }
+        
+          ::-webkit-progress-value {
+              border-radius: 6px;
+              background-color: $red;
+          }
+    }
+
+    .training-session-card-container {
+        color: $white;
+        font-weight: 500;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+        @media all and (max-width: 300px) {
+            font-size: 12px;;
+          }
+
+        .training-session-card {
+            margin: 5px;
+            background-color: $red;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 50%;
+            max-width: 150px;
+
+            .session-card-img {
+                padding-top: 20px;
+
+                img{
+                    width: 50px;
+                    height: 70px;
+                }
+            }
+
+            .session-card-label {
+                padding: 0px 10px 5px;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+
+    .training-session-details {
+        .pathway-container {
+            span {
+                margin-bottom: -70px;
+                font-family: $Roboto;
+                font-weight: 900;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flip-card {
+            height: 75px;
+            margin-bottom: 12px;
+
+            &.active-back {
+                .info-tile {
+                    justify-content: flex-start;
+                }
+                .info-tile-details.front {
+                    // This shouldn't be necessary but the absolutely positioned elements from the front bleed through for some reason
+                    display: none;
+                }
+            }
+        }
+
+        .info-tile {
+            font-family: $Roboto;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 12px 17px;
+
+            .info-tile-more-link {
+                display: none;
+            }
+
+            .info-tile-header-content {
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                color: $text-dark;
+
+                .info-tile-icon {
+                    padding-right: 15px;
+
+    
+                    img {
+                        width: 40px;
+                    }
+                }
+                .info-tile-label {
+                    font-size: 15px;
+                    @media all and (max-width: 300px) {
+                        font-size: 12px;;
+                      }
+                } 
+            }
+
+            .info-tile-details {
+                font-size: 12px;
+                
+
+                &.value-position-center {
+                    .info-tile-value {
+                        position: absolute;
+                        text-align: center;
+                        top: 50%;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+            
+            .info-tile-details-title {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 22px;
+            }
+
+            .info-tile-details-text {
+                font-size: 9px;
+            }
+
+            .info-tile-value {
+                color: $red;
+                font-size: 25px;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.progress-ring {
+    display: block;
+    position: relative;
+
+    @media all and (max-width: 300px) {
+        transform: translateX(-15px);
+    }
+
+    .bg-circle {
+        border: rgb(231, 231, 231) 20px solid;
+        border-radius: 50%;
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        transform: translate(50px, 60px);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .pathway-name {
+            width: 100%;
+            color: black;
+            font-size: 11px;
+            letter-spacing: 0px;
+            transform: translateX(15px);
+        }
+
+        .session-name {
+            width: 100%;
+            color: $red;
+            font-weight: 900;
+            letter-spacing: -1px;
+            transform: translateX(15px);
+        }
+
+        .title {
+            font-size: 20px;
+        }
+
+    }
+    
+
+    .bg-circle2 {
+        border: rgb(231, 231, 231) 4px solid;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        transform: translate(40px, 50px);
+        
+    }
+
+    .progress-ring-svg {
+        overflow: hidden;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scaleX(-1);
+
+        .progress-ring-circle {
+            transition: 0.35s stroke-dashoffset;
+            // axis compensation
+            transform: rotate(217deg);
+            transform-origin: 50% 50%;
+        }
+    }
+}
