@@ -39,7 +39,7 @@ export const SignIn = () => {
             <form className="form" onSubmit={handleSubmit}>
                 <div className="form-control">
                 <div className="sign-in-1">
-                <h1 className="sign-in-text"><span><i className="arrow left" onClick={() => {history.goBack()}}></i></span>&nbsp;&nbsp;&nbsp;Sign In</h1>
+                <h1 className="sign-in-text"><span><i className="arrow left" onClick={() => {history.push('./login')}}></i></span>&nbsp;&nbsp;&nbsp;Sign In</h1>
                 </div>
                 <label htmlFor="userName" className="user">Username <span className="asterisk1">*</span></label>
                 <br />
@@ -72,7 +72,7 @@ export const SignIn = () => {
                 <img src={Google} alt="google-logo" className="google" onClick={handleClick_3}/>
                 <img src={Apple} alt="apple-icon" className="apple" onClick={handleClick_4}/>
             </div>
-            <h3 className="heading-4">Don't have an account? <span className="sign-up" onClick={() => {history.push('/login')}}>Sign Up</span></h3>
+            <h3 className="heading-4">Don't have an account? <span className="sign-up" onClick={() => {history.push('/signup')}}>Sign Up</span></h3>
             </div>
         </>
     )

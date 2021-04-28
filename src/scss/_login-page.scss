@@ -22,9 +22,10 @@
         object-fit: contain;
         align-items: center;
         margin: auto;
+        position: static;
     }
 
-    .heading-1 {
+    .image-heading {
         width: 227px;
         height: 46px;
         margin: 2px 74px 87px;
@@ -41,10 +42,10 @@
         justify-content: center;
         display: flex;
         padding: 15px 10px 15px 10px;
-        margin-top: -3%;
+        margin-top: -1%;
     }
 
-    .heading-2 {
+    .image-description {
         width: 228px;
         height: 70px;
         margin: 39.2px 73px 25.8px 74px;
@@ -60,7 +61,7 @@
         display: flex;
         justify-content: center;
         margin: auto;
-        margin-top: -3.5%;
+        margin-top: 0.5%;
         padding: 20px 10px 15px 10px;
     }
 
@@ -144,7 +145,6 @@
         padding: 1px 0px 10px;
     }
 
-
     .icon-container {
         display: flex;
         justify-content: center;
@@ -190,5 +190,80 @@
         font-weight: bold;
         cursor: pointer;
     }
+
+    .arrow {
+        border: 1px solid lightgray;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 7px;
+        cursor: pointer;
+    }  
+    
+    .left {
+        transform: rotate(675deg);
+        -webkit-transform: rotate(675deg);
+    }
+
+    .next,
+    .prev {
+        top: calc(50% - 20px);
+        position: absolute;
+        background: white;
+        border-radius: 30px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        z-index: 1;
+    }
+
+    .next {
+        right: 10px;
+        justify-content: center;
+        margin: auto;
+      }
+      
+      .prev {
+        left: 10px;
+        transform: scale(-1);
+      }
+
+      img {
+        background-color: transparent;
+        display: flex;
+        justify-items: center;
+        margin: 8px 39px 2px 37px;
+        width: 299px;
+        height: 187px;
+        object-fit: contain;
+        align-items: center;
+        margin: auto;
+        max-width: 100vw;
+        position: relative;
+        padding: 20px 10px 15px 10px;
+        // // display: block;
+        // margin-left: auto;
+        // margin-right: auto
+      }
+
+      .refresh {
+        padding: 10px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
 
 }
